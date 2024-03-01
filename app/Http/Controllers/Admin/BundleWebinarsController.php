@@ -1,0 +1,132 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\Bundle;
+use App\Models\BundleWebinar;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
+class BundleWebinarsController extends Controller
+{
+    public function store(Request $request)
+    {
+        $this->authorize('admin_bundles_edit');
+
+        $data = $request->all();
+        $validator = Validator::make($data, [
+            'bundle_id' => 'required',
+            'webinar_id' => 'required|exists:webinars,id',
+        ]);
+
+        if ($validator->fails()) {
+            return response([
+                'code' => 422,
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $bundle = Bundle::find($data['bundle_id']);
+
+        if (!empty($bundle)) {
+            $bundleWebinar = BundleWebinar::where('bundle_id', $data['bundle_id'])
+                ->where('webinar_id', $data['webinar_id'])
+                ->first();
+
+            if (!empty($bundleWebinar)) {
+                $bundleWebinar->update([
+                    'semester_id' => @$data['semester_id'],
+                ]);
+            }
+
+            BundleWebinar::create([
+                'creator_id' => $bundle->creator_id,
+                'bundle_id' => $data['bundle_id'],
+                'webinar_id' => $data['webinar_id'],
+                'bundle_semester_id' => $data['semester_id'],
+            ]);
+        }
+
+        return response()->json([
+            'code' => 200,
+        ], 200);
+    }
+
+    public function edit(Request $request, $id)
+    {
+        $this->authorize('admin_bundles_edit');
+
+        if (!empty($request->get('item_id'))) {
+            $bundleWebinar = BundleWebinar::where('id', $id)
+                ->first();
+
+            if (!empty($bundleWebinar)) {
+                return response()->json([
+                    'bundleWebinar' => $bundleWebinar
+                ], 200);
+            }
+        }
+
+        return response()->json([], 422);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->authorize('admin_bundles_edit');
+
+        $data = $request->all();
+
+        $validator = Validator::make($data, [
+            'bundle_id' => 'required',
+            'webinar_id' => 'required|exists:webinars,id',
+            'semester_id' => 'required|exists:bundle_semesters,id',
+        ]);
+
+        if ($validator->fails()) {
+            return response([
+                'code' => 422,
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $bundleWebinar = BundleWebinar::where('id', $id)
+            ->where('bundle_id', $data['bundle_id'])
+            ->first();
+
+        if (!empty($bundleWebinar)) {
+
+            $checkBundleWebinar = BundleWebinar::where('id', '!=', $id)
+                ->where('bundle_id', $data['bundle_id'])
+                ->where('webinar_id', $data['webinar_id'])
+                ->first();
+
+            if (!empty($checkBundleWebinar)) {
+                $bundleWebinar->update([
+                    'semester_id' => @$data['semester_id'],
+                ]);
+            }
+
+
+            $bundleWebinar->update([
+                'bundle_id' => $data['bundle_id'],
+                'webinar_id' => $data['webinar_id'],
+                'bundle_semester_id' => $data['semester_id'],
+
+            ]);
+        }
+
+        return response()->json([
+            'code' => 200,
+        ], 200);
+    }
+
+    public function destroy(Request $request, $id)
+    {
+        $this->authorize('admin_bundles_edit');
+
+        BundleWebinar::find($id)->delete();
+
+        return redirect()->back();
+    }
+}
