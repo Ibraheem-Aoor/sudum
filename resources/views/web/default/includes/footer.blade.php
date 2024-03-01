@@ -49,7 +49,7 @@
 
                 <div class="mt-20 fend-element">
 
-                    <p class="d-block text-white font-weight-bold font-24">عن سُدم المعرفة</p>
+                    <p class="d-block text-white font-weight-bold font-24">عن نهج المعرفة</p>
 
                     <br>
 
