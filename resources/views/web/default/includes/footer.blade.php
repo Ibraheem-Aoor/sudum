@@ -121,7 +121,7 @@
                 <div class="mt-20 fend-element">
                     <p>
                         <a href="/pages/about">
-                            <span style="color: #ffffff;">عن سدم المعرفة</span>
+                            <span style="color: #ffffff;">عن نهج المعرفة</span>
                         </a>
                     </p>
 
