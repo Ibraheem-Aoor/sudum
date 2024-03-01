@@ -1,0 +1,629 @@
+[20-Jan-2024 07:38:26 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:38:50 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:38:54 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:38:58 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:39:55 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:40:33 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:43:35 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:45:16 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:46:18 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:49:27 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:49:30 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:56:05 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:56:11 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:56:14 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:57:55 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:57:58 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[20-Jan-2024 07:58:56 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#10 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#11 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#13 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#14 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build('config')
+#1 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->make('config', Array)
+#4 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1431): Illuminate\Foundation\Application->make('config')
+#5 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(524): Illuminate\Container\Container->offsetGet('config')
+#6 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(575): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(122): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(645): Illuminate\Log\LogManager->driver()
+#9 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\Log\LogManager->error('Call to undefin...', Array)
+#10 /home/sudmcom/public_html/app/Exceptions/Handler.php(45): Illuminate\Foundation\Exceptions\Handler->report(Object(Error))
+#11 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(481): App\Exceptions\Handler->report(Object(Error))
+#12 /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(136): Illuminate\Foundation\Http\Kernel->reportException(Object(Error))
+#13 /home/sudmcom/public_html/public/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/sudmcom/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
