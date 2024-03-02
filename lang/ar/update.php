@@ -2134,6 +2134,8 @@ return [
     'fourth_sem_hours_hint' => 'الحد الأقصى المسموح للطالب تسجيله خلال الفصل الرابع',
     'faqs'      =>  'الاسئلة الشائعة',
     'latest_webinar_remove_date' => 'اخر موعد لسحب المواد',
+    'studyschedule_for_bundle'  => 'الجدول الدراسي: :bundle',
+
 
 
 ];

@@ -54,7 +54,7 @@
                 <select name="webinar_id" class="form-control" data-bundle-id="{{  !empty($bundle) ? $bundle->id : '' }}" data-placeholder="{{ trans('panel.select_course') }}">
                     @forelse($bundleWebinars as $bundleWebinar)
                         @if(!empty($bundleWebinar->webinar->title))
-                            <option value="{{ $bundleWebinar->webinar->title }}">{{ $bundleWebinar->webinar->title }}</option>
+                            <option value="{{ $bundleWebinar->webinar->id }}">{{ $bundleWebinar->webinar->title }}</option>
                         @endif
                     @empty
                         <option value="" disabled>لا توجد مواد متوفر لهذة الدبلومة</option>

@@ -190,6 +190,10 @@
                                                         <a href="{{ route('student.bundle_plan' , encrypt($sale->bundle_id)) }}" target="_blank"
                                                             class="webinar-actions d-block mt-10">{{ trans('public.set_plan') }}</a>
                                                     @endif
+                                                    @if ($sale->bundle_id)
+                                                        <a href="{{ route('student.stude_schedule' , encrypt($sale->bundle_id)) }}" target="_blank"
+                                                            class="webinar-actions d-block mt-10">{{ trans('update.studyschedule') }}</a>
+                                                    @endif
                                                 @endif
                                             </div>
                                         </div>

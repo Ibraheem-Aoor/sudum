@@ -427,6 +427,7 @@ Route::group(['namespace' => 'Panel', 'prefix' => 'panel', 'middleware' => ['che
             // users can edit the studying plan for add/remove webinars 'studying hours'
             Route::withoutMiddleware('user.not.access')->group(function(){
                 Route::get('/{id}/plan', 'BundlesController@showPlan')->name('student.bundle_plan');
+                Route::get('/{id}/study-schedule', 'BundlesController@studySchedule')->name('student.stude_schedule');
                 Route::post('/register-webinar-to-user-bundle', 'BundlesController@addOrRemoveBundleWebinarToUser')->name('student.add_remove_bundle_webinar');
             });
 

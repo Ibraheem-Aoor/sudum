@@ -1073,6 +1073,20 @@ class User extends Authenticatable
 
 
 
+    /**
+     * check if the user registerd this webinar for the specified bundle
+     */
+    public function hasRegisteredWebinarForBundle($bundle_id, $webinar_id): bool
+    {
+        return $this->bundleWebinars()->whereHas('bundleWebinar', function ($bundleWebinar) use ($bundle_id, $webinar_id) {
+            $bundleWebinar->where('bundle_id' , $bundle_id)->where('webinar_id' , $webinar_id);
+        })->exists();
+    }
+
+
+
+
+
 
 
 }

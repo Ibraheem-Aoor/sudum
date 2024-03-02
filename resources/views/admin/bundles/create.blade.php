@@ -687,7 +687,7 @@
 
                                                             @foreach ($bundle->Studyschedule as $Studyschedule)
                                                                 <tr>
-                                                                    <th>{{ $Studyschedule->webinar_id }}</th>
+                                                                    <th>{{ $Studyschedule->webinar->title }}</th>
                                                                     <td>{{ $Studyschedule->day }}</td>
                                                                     <td>{{ $Studyschedule->date }}</td>
                                                                     <td>{{ $Studyschedule->start_time }}</td>

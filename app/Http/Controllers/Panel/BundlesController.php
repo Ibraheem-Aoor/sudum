@@ -706,4 +706,15 @@ class BundlesController extends Controller
         return response()->json($response);
     }
 
+
+    /**
+     * Dispaly The StudySchedule Of The Student
+     */
+    public function studySchedule($id)
+    {
+        $data['auth_user'] = Auth::user();
+        $data['bundle'] = Bundle::query()->findOrFail(decrypt($id));
+        return view('web.default.panel.bundle.study_schedule', $data);
+    }
+
 }
