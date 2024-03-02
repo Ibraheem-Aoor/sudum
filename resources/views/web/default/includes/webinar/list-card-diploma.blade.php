@@ -73,7 +73,7 @@
                     <i data-feather="clock" width="20" height="20" class="webinar-icon"></i>
                     <span
                         class="duration ml-5 font-14">{{ isset($bundle) ? $webinar->number_of_hours : convertMinutesToHourAndMinute($webinar->duration) }}
-                        {{ trans('home.hours') }}</span>
+                        {{  isset($bundle) ?  __('home.offical_hours') :  trans('home.hours') }}</span>
                 </div>
 
                 <div class="vertical-line h-25 mx-15"></div>

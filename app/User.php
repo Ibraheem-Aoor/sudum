@@ -6,6 +6,7 @@ use App\Bitwise\UserLevelOfTraining;
 use App\Mixins\RegistrationPackage\UserPackage;
 use App\Models\Accounting;
 use App\Models\Badge;
+use App\Models\Bundle;
 use App\Models\BundleSemester;
 use App\Models\BundleWebinar;
 use App\Models\BundleWebinarStudent;
@@ -1052,11 +1053,22 @@ class User extends Authenticatable
 
 
 
-    public function doesStudentHaveThisBundleWebinar(BundleWebinar $bundleWebinar) : bool
+    public function doesStudentHaveThisBundleWebinar(BundleWebinar $bundleWebinar): bool
     {
-        return $this->bundleWebinars()->whereHas('bundleWebinar' , function($query)use($bundleWebinar){
-            $query->where('bundle_webinar_id' , $bundleWebinar->id);
+        return $this->bundleWebinars()->whereHas('bundleWebinar', function ($query) use ($bundleWebinar) {
+            $query->where('bundle_webinar_id', $bundleWebinar->id);
         })->exists();
+    }
+
+    /**
+     * check if the user purchased this bundle
+     */
+    public function hasThisBundleInPurchases(Bundle $bundle): bool
+    {
+        return Sale::where('buyer_id', $this->id)
+            ->where(function ($query) use ($bundle) {
+                $query->where('bundle_id', $bundle->id);
+            })->exists();
     }
 
 

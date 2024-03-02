@@ -4,18 +4,11 @@
         <h2 class="section-title after-line">{{ trans('product.courses') }}</h2>
 
         @foreach ($bundle->bundleWebinars as $bundleWebinar)
-            @if (!empty($bundleWebinar->webinar))
-                @if (!isset($user))
-                    @include('web.default.includes.webinar.list-card-diploma', [
-                        'webinar' => $bundleWebinar->webinar,
-                        'bundle' => $bundle,
-                    ])
-                @elseif($user->doesStudentHaveThisBundleWebinar($bundleWebinar))
-                    @include('web.default.includes.webinar.list-card-diploma', [
-                        'webinar' => $bundleWebinar->webinar,
-                        'bundle' => $bundle,
-                    ])
-                @endif
+            @if (!empty($bundleWebinar->webinar) && isset($user) && $user->doesStudentHaveThisBundleWebinar($bundleWebinar))
+                @include('web.default.includes.webinar.list-card-diploma', [
+                    'webinar' => $bundleWebinar->webinar,
+                    'bundle' => $bundle,
+                ])
             @endif
         @endforeach
     </div>
