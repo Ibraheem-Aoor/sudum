@@ -373,6 +373,7 @@ return [
     'add' => 'إضافة',
     'rmv' => 'سحب',
     'student' => 'الطالب',
+    'register_semester_subjects' => 'تسجيل المواد',
 
 
 ];

@@ -411,6 +411,7 @@ return [
     'add' => 'Add',
     'rmv' => 'remove',
     'student' => 'Student',
+    'register_semester_subjects' => 'Register Courses',
 
 
 ];
