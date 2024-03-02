@@ -20,6 +20,7 @@ use App\Models\WebinarFilterOption;
 use App\Models\WebinarPartnerTeacher;
 use App\User;
 use Auth;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -638,6 +639,7 @@ class BundlesController extends Controller
         $data['total_registerd_hours_for_second_semester'] = $data['auth_user']->getTotalRegisterdHours(semester_id: $data['second_semester_webinars']->first()?->semester?->id);
         $data['total_registerd_hours_for_third_semester'] = $data['auth_user']->getTotalRegisterdHours(semester_id: $data['third_semester_webinars']->first()?->semester?->id);
         $data['total_registerd_hours_for_fourth_semester'] = $data['auth_user']->getTotalRegisterdHours(semester_id: $data['fourth_semester_webinars']->first()?->semester?->id);
+        $data['is_removal_avilable'] = $data['bundle']->latest_webinar_remove_date >= Carbon::today()->toDateString();
         return view('web.default.panel.bundle.plan', $data);
     }
 
@@ -649,9 +651,11 @@ class BundlesController extends Controller
         try{
             $auth_user = Auth::user();
             $bundle_webinar = BundleWebinar::query()->findOrFail(decrypt($request->bundle_webinar_id));
+            $is_removal_avilable = $bundle_webinar->bundle->latest_webinar_remove_date >= Carbon::today()->toDateString();
             $semseter = $bundle_webinar->semester;
             $total_registerd_hours_for_semester = $auth_user->getTotalRegisterdHours(semester_id:$semseter->id);
             $total_hours_after_registering_this_webinar = $total_registerd_hours_for_semester + $bundle_webinar->webinar->number_of_hours;
+
             // toggling
             $response = [
                 'status'    =>  true,
@@ -662,9 +666,17 @@ class BundlesController extends Controller
             ];
             if($auth_user->doesStudentHaveThisBundleWebinar($bundle_webinar))
             {
-                $auth_user->bundleWebinars()->where('bundle_webinar_id' , $bundle_webinar->id)->delete();
-                $response['btn_text'] = __('public.add');
-                $response['btn_class'] =  'btn btn-md btn-primary add-remove-btn';
+                if(!$is_removal_avilable)
+                {
+                    $response = [
+                        'status'    =>  false,
+                        'message'   =>  __('public.latest_removal_date_passed'),
+                    ];
+                }else{
+                    $auth_user->bundleWebinars()->where('bundle_webinar_id' , $bundle_webinar->id)->delete();
+                    $response['btn_text'] = __('public.add');
+                    $response['btn_class'] =  'btn btn-md btn-primary add-remove-btn';
+                }
             }elseif($total_hours_after_registering_this_webinar > $semseter->max_number_of_hours){
                 $response = [
                     'status'    =>  false,

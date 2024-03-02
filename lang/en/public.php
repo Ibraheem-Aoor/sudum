@@ -412,6 +412,7 @@ return [
     'rmv' => 'remove',
     'student' => 'Student',
     'register_semester_subjects' => 'Register Courses',
+    'latest_removal_date_passed' => 'Latest Remove Date Has Been Passed',
 
 
 ];

@@ -149,6 +149,8 @@ return [
         'second_sem_hours' => 'الحد الأقصى لعدد ساعات الفصل الثاني',
         'third_sem_hours' => 'الحد الأقصى لعدد ساعات الفصل الثالث',
         'fourth_sem_hours' => 'الحد الأقصى لعدد ساعات الفصل الرابع',
+        'latest_webinar_remove_date'    =>  'اخر موعد للسحب',
+
     ],
 
 ];

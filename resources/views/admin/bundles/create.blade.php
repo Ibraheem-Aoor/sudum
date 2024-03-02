@@ -344,6 +344,21 @@
                                                     </div>
                                                 @enderror
                                             </div>
+                                            {{-- latest_webinar_remove_date --}}
+                                            <div class="form-group mt-15">
+                                                <label class="input-label">{{ trans('update.latest_webinar_remove_date') }}</label>
+                                                <input required type="date"  name="latest_webinar_remove_date"
+                                                    value="{{ !empty($bundle) ? $bundle->latest_webinar_remove_date : old('latest_webinar_remove_date') }}"
+                                                    class="form-control @error('latest_webinar_remove_date')  is-invalid @enderror"
+                                                    placeholder="" />
+                                                <div class="text-muted text-small mt-1">
+                                                    {{ trans('update.latest_webinar_remove_date') }}</div>
+                                                @error('latest_webinar_remove_date')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
                                         </div>
 
 

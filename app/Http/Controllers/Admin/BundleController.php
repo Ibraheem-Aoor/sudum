@@ -263,6 +263,7 @@ class BundleController extends Controller
             'second_sem_hours' => 'required|numeric',
             'third_sem_hours' => 'required|numeric',
             'fourth_sem_hours' => 'required|numeric',
+            'latest_webinar_remove_date' => 'required|date',
         ]);
 
         /* البيانات عبارة عن مصفوفة للمدخلات كلها */
@@ -299,6 +300,7 @@ class BundleController extends Controller
             'diploma_hours' => $data['diploma_hours'] ?? null,
             'category_id' => $data['category_id'],
             'message_for_reviewer' => $data['message_for_reviewer'] ?? null,
+            'latest_webinar_remove_date'    =>  @$data['latest_webinar_remove_date'],
             'status' => Bundle::$pending,
             'created_at' => time(),
             'updated_at' => time(),
@@ -416,6 +418,8 @@ class BundleController extends Controller
             'second_sem_hours' => 'required|numeric',
             'third_sem_hours' => 'required|numeric',
             'fourth_sem_hours' => 'required|numeric',
+            'latest_webinar_remove_date' => 'required|date',
+
         ];
 
         $this->validate($request, $rules);
@@ -504,6 +508,8 @@ class BundleController extends Controller
             'category_id' => $data['category_id'],
             'message_for_reviewer' => $data['message_for_reviewer'] ?? null,
             'status' => $data['status'],
+            'latest_webinar_remove_date'    =>  @$data['latest_webinar_remove_date'],
+
             'updated_at' => time(),
         ]);
         $this->updateBundleSemesters($bundle, $data);
@@ -907,21 +913,21 @@ class BundleController extends Controller
     /**
      * Dispaly The Registered Webinars of this student
      */
-    public function showStudentRegisterdWebinars($std_id , $bundle_id)
+    public function showStudentRegisterdWebinars($std_id, $bundle_id)
     {
-        $data['student']    = User::query()->findOrFail(decrypt($std_id));
-        $data['bundle']     =   Bundle::query()->findOrFail($bundle_id);
-        $data['pageTitle']   =  __('public.studyPlan');
-        $data['first_semester_webinars']    =   $data['bundle']->bundleWebinars()->whereHas('semester' , function($semester){
+        $data['student'] = User::query()->findOrFail(decrypt($std_id));
+        $data['bundle'] = Bundle::query()->findOrFail($bundle_id);
+        $data['pageTitle'] = __('public.studyPlan');
+        $data['first_semester_webinars'] = $data['bundle']->bundleWebinars()->whereHas('semester', function ($semester) {
             $semester->whereName(BundleSemsterEnum::FIRST->value);
         })->get();
-        $data['second_semester_webinars']    =   $data['bundle']->bundleWebinars()->whereHas('semester' , function($semester){
+        $data['second_semester_webinars'] = $data['bundle']->bundleWebinars()->whereHas('semester', function ($semester) {
             $semester->whereName(BundleSemsterEnum::SECOND->value);
         })->get();
-        $data['third_semester_webinars']    =   $data['bundle']->bundleWebinars()->whereHas('semester' , function($semester){
+        $data['third_semester_webinars'] = $data['bundle']->bundleWebinars()->whereHas('semester', function ($semester) {
             $semester->whereName(BundleSemsterEnum::THIRD->value);
         })->get();
-        $data['fourth_semester_webinars']    =   $data['bundle']->bundleWebinars()->whereHas('semester' , function($semester){
+        $data['fourth_semester_webinars'] = $data['bundle']->bundleWebinars()->whereHas('semester', function ($semester) {
             $semester->whereName(BundleSemsterEnum::FOURTH->value);
         })->get();
         $data['total_registerd_hours_for_first_semester'] = $data['student']->getTotalRegisterdHours(semester_id: $data['first_semester_webinars']->first()?->semester?->id);

@@ -374,6 +374,8 @@ return [
     'rmv' => 'سحب',
     'student' => 'الطالب',
     'register_semester_subjects' => 'تسجيل المواد',
+    'latest_removal_date_passed' => 'لقد تجاوزت الموعد المحدد لسحب المواد',
+
 
 
 ];

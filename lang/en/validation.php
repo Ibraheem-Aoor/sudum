@@ -145,6 +145,8 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'latest_webinar_remove_date'    =>  'Latest Webinar Remove Date',
+    ],
 
 ];

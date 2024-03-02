@@ -36,9 +36,11 @@
                                                 <td>{{ $bundle_webinar->webinar->number_of_hours }}</td>
                                                 <td>
                                                     @if ($auth_user->doesStudentHaveThisBundleWebinar($bundle_webinar))
-                                                        <button type="button" class="btn btn-md btn-danger add-remove-btn"
-                                                            data-bundle_webinar_id="{{ encrypt($bundle_webinar->id) }}"
-                                                            data-table="first-semester">{{ __('public.rmv') }}</button>
+                                                        @if ($is_removal_avilable)
+                                                            <button type="button" class="btn btn-md btn-danger add-remove-btn"
+                                                                data-bundle_webinar_id="{{ encrypt($bundle_webinar->id) }}"
+                                                                data-table="first-semester">{{ __('public.rmv') }}</button>
+                                                        @endif
                                                     @else
                                                         <button type="button" class="btn btn-md btn-primary add-remove-btn"
                                                             data-bundle_webinar_id="{{ encrypt($bundle_webinar->id) }}"
