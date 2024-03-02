@@ -267,5 +267,7 @@ return [
     'content_defined' => 'تم تعريف المحتوى',
     'purchased_courses_and_diplomas' => 'الدورات والدبلومات المشتراه',
     'select_semester' => 'اختر الفصل الدراسي',
+    'bundles' => 'الدبلومات',
+
 
 ];

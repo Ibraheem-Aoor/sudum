@@ -1053,8 +1053,13 @@ class WebinarController extends Controller
             ->whereHas('sale')
             ->pluck('id')
             ->toArray();
-
-        $query = Sale::query()
+        $query = Sale::query();
+        // webinar or bundle
+        if($request->has('type'))
+        {
+            $query->whereHas($request->query('type'));
+        }
+        $query = $query
             ->where(function ($query) use ($user, $giftsIds) {
                 $query->where('sales.buyer_id', $user->id);
                 $query->orWhereIn('sales.gift_id', $giftsIds);

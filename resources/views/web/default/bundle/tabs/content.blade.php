@@ -33,7 +33,7 @@
     @endphp
 
     @if ($hasPurchases)
-        <section class="mt-30">
+        <section class="mt-30 d-none">
             <div class="d-flex justify-content-between align-items-center">
                 <h2 class="section-title after-line">{{ trans('update.studyschedule') }}</h2>
             </div>

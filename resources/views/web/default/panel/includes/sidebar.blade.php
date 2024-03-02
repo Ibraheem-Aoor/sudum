@@ -144,8 +144,12 @@
                         </li>
                     @endif
 
-                    <li class="mt-5 {{ (request()->is('panel/webinars/purchases')) ? 'active' : '' }}">
-                        <a href="/panel/webinars/purchases">{{ trans('panel.my_purchases') }}</a>
+                    <li class="mt-5 {{ (request()->is('panel/webinars/purchases') && request()->query('type') == 'webinar') ? 'active' : '' }}">
+                        <a href="/panel/webinars/purchases?type=webinar">{{ trans('panel.my_purchases') }}</a>
+                    </li>
+
+                    <li class="mt-5 {{ (request()->is('panel/webinars/purchases') && request()->query('type')  == 'bundle') ? 'active' : '' }}">
+                        <a href="/panel/webinars/purchases?type=bundle">{{ trans('panel.bundles') }}</a>
                     </li>
 
                     @if($authUser->isOrganization() || $authUser->isTeacher())

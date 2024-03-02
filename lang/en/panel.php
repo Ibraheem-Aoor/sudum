@@ -292,4 +292,5 @@ return [
     'purchased_courses_and_diplomas' => 'Purchased Courses And Diplomas',
     'select_semester' => 'Select Semester',
 
+    'bundles' => 'Bundle',
 ];
