@@ -84,4 +84,6 @@ return [
     'platform_address' => 'العنوان',
     'order_summary' => 'ملخص الطلب',
     'blog_search_placeholder' => 'بحث عن منشورات المدونة...',
+    'offical_hours' => 'ساعات معتمدة',
+
 ];

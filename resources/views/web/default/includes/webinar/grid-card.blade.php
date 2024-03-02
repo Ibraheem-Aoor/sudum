@@ -69,7 +69,7 @@
             <div class="d-flex justify-content-between mt-20">
                 <div class="d-flex align-items-center">
                     <i data-feather="clock" width="20" height="20" class="webinar-icon"></i>
-                    <span class="duration font-14 ml-5">{{ convertMinutesToHourAndMinute($webinar->duration) }} {{ trans('home.hours') }}</span>
+                    <span class="duration font-14 ml-5">{{ convertMinutesToHourAndMinute($webinar->duration) }} {{ isset($is_type_bundle) && $is_type_bundle ? (__('home.offical_hours')) : (__('home.hours'))    }}</span>
                 </div>
 
                 <div class="vertical-line mx-15"></div>

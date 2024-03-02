@@ -27,7 +27,9 @@ class ClassesController extends Controller
             ->where('private', false)->where('category_id', '<=' , 612);
 
         $type = $request->get('type');
+        $is_type_bulde = false;
         if (!empty($type) and is_array($type) and in_array('bundle', $type)) {
+            $is_type_bulde = true;
             $webinarsQuery = Bundle::where('bundles.status', 'active');
             $this->tableName = 'bundles';
             $this->columnId = 'bundle_id';
@@ -56,7 +58,8 @@ class ClassesController extends Controller
             'pageDescription' => $pageDescription,
             'pageRobot' => $pageRobot,
             'webinars' => $webinars,
-            'coursesCount' => $webinars->total()
+            'coursesCount' => $webinars->total(),
+            'is_type_bundle'    => $is_type_bulde,
         ];
 
         return view(getTemplate() . '.pages.classes', $data);
