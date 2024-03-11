@@ -25,7 +25,6 @@ class ClassesController extends Controller
         /* كود عرض استعلام جميع فئات الكورسات الاصغر من رقم 612 وهو رقم معرف فئات الدبلومات */
         $webinarsQuery = Webinar::where('webinars.status', 'active')
             ->where('private', false)->where('category_id', '<=' , 612);
-
         $type = $request->get('type');
         $is_type_bulde = false;
         if (!empty($type) and is_array($type) and in_array('bundle', $type)) {
@@ -39,7 +38,6 @@ class ClassesController extends Controller
 
 
         $sort = $request->get('sort', null);
-
         if (empty($sort) or $sort == 'newest') {
             $webinarsQuery = $webinarsQuery->orderBy("{$this->tableName}.created_at", 'desc');
         }
@@ -49,7 +47,7 @@ class ClassesController extends Controller
         ])->paginate(6);
 
         $seoSettings = getSeoMetas('classes');
-        $pageTitle = $seoSettings['title'] ?? '';
+        $pageTitle = $is_type_bulde ? __('update.the_bundles') : ($seoSettings['title'] ?? '');
         $pageDescription = $seoSettings['description'] ?? '';
         $pageRobot = getPageRobot('classes');
 
@@ -61,7 +59,6 @@ class ClassesController extends Controller
             'coursesCount' => $webinars->total(),
             'is_type_bundle'    => $is_type_bulde,
         ];
-
         return view(getTemplate() . '.pages.classes', $data);
     }
 

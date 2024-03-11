@@ -2135,7 +2135,5 @@ return [
     'faqs'      =>  'الاسئلة الشائعة',
     'latest_webinar_remove_date' => 'اخر موعد لسحب المواد',
     'studyschedule_for_bundle'  => 'الجدول الدراسي: :bundle',
-
-
-
+    'the_bundles'   =>'الدبلومات',
 ];

@@ -2165,5 +2165,7 @@ return [
     'faqs' => 'FAQs',
     'latest_webinar_remove_date' => 'Last Date To Remove Diploma Courses',
     'studyschedule_for_bundle'  => 'Study Schedule: :bundle',
+    'the_bundles'   =>'Bundles',
+
 
 ];
