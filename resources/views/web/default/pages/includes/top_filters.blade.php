@@ -20,7 +20,7 @@
                 </label>
             </div>
 
-            @if (!isset($is_type_bundle) ||(isset($is_type_bundle) && !$is_type_bundle))
+            @if (!isset($is_type_bundle) || (isset($is_type_bundle) && !$is_type_bundle))
                 <!-- First Link -->
                 <div class="d-flex align-items-center justify-content-between justify-content-md-center mb-2"
                     style="margin-right: 20px;">
@@ -47,16 +47,17 @@
                             التطويرية</a>
                     </label>
                 </div>
+
+
+                <div class="d-flex align-items-center justify-content-between justify-content-md-center mb-2"
+                    style="margin-right: 20px;">
+                    <label class="mb-0 mr-10 cursor-pointer">
+                        <a href="/categories/courses-selected-for-you"
+                            class="position-relative font-14 text-secondary">دورات مختارة لك</a>
+                    </label>
+                </div>
             @endif
 
-
-            <div class="d-flex align-items-center justify-content-between justify-content-md-center mb-2"
-                style="margin-right: 20px;">
-                <label class="mb-0 mr-10 cursor-pointer">
-                    <a href="/categories/courses-selected-for-you"
-                        class="position-relative font-14 text-secondary">دورات مختارة لك</a>
-                </label>
-            </div>
 
         </div>
 
