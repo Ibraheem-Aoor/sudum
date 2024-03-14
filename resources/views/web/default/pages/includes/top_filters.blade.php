@@ -2,8 +2,8 @@
     <div class="row align-items-center">
         <div class="col-lg-9 d-flex align-items-center">
 
-            <div class="checkbox-button primary-selected">
-                <input type="radio" name="card" id="gridView" value="grid"
+            <div class="checkbox-button primary-selected" @if(isset($is_type_bundle) && $is_type_bundle) onclick="event.preventDefault();window.location.href='classes?type[]=bundle&card=grid'" @endif>
+                <input type="radio" name="card" id="gridView" value="grid" @if(isset($is_type_bundle) && $is_type_bundle) onclick="event.preventDefault();window.location.href='classes?type[]=bundle&card=grid'" @endif
                     @if (empty(request()->get('card')) or request()->get('card') == 'grid') checked="checked" @endif>
                 <label for="gridView" class="bg-white border-0 mb-0">
                     <i data-feather="grid" width="25" height="25"
@@ -11,8 +11,8 @@
                 </label>
             </div>
 
-            <div class="checkbox-button primary-selected ml-10">
-                <input type="radio" name="card" id="listView" value="list"
+            <div class="checkbox-button primary-selected ml-10" @if(isset($is_type_bundle) && $is_type_bundle) onclick="event.preventDefault();window.location.href='classes?type[]=bundle&card=list'" @endif>
+                <input type="radio" name="card" id="listView" value="list" @if(isset($is_type_bundle) && $is_type_bundle) onclick="event.preventDefault();window.location.href='classes?type[]=bundle&card=list'" @endif
                     @if (!empty(request()->get('card')) and request()->get('card') == 'list') checked="checked" @endif>
                 <label for="listView" class="bg-white border-0 mb-0">
                     <i data-feather="list" width="25" height="25"
