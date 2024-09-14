@@ -32,6 +32,7 @@ class Channel extends BasePaymentChannel implements IChannel
     public function paymentRequest(Order $order)
     {
         try {
+            $user = auth()->user();
             session()->put($this->order_session_key, $order->id);
 
             $client = new Client();
@@ -44,8 +45,12 @@ class Channel extends BasePaymentChannel implements IChannel
                     'entityId' => $this->entityId,
                     'amount' => $order->total_amount,
                     'currency' => 'SAR',
-                    'paymentType' => 'DB'
-                ]
+                    'paymentType' => 'DB',
+                    'customer.givenName' =>  $user->full_name,
+                    'customer.phone' =>  $user->mobile,
+                    'customer.email' =>  $user->email,
+                ],
+
             ];
             $request = new Psr7Request('POST', "{$this->endPointUrl}/checkouts", $headers);
             $res = $client->sendAsync($request, $options)->wait();
@@ -56,7 +61,9 @@ class Channel extends BasePaymentChannel implements IChannel
 
             return view("web.default.cart.channels.hayperPay", ["checkoutId" => $responseArray["id"]]);
         } catch (\Exception $e) {
-            print('Error: ' . $e->getMessage());
+            // print ('Error: ' . $e->getMessage());
+            info ('Error: ' . $e->getMessage());
+            throw $e;
         }
     }
 
@@ -73,10 +80,9 @@ class Channel extends BasePaymentChannel implements IChannel
                 'Authorization' => "Bearer {$this->authToken}",
             ];
             $request = new Psr7Request('GET', "{$this->endPointUrl}/checkouts/{$id}/payment?entityId={$this->entityId}", $headers);
-            $res = $client->sendAsync($request)->wait();
+            $res = $client->sendAsync($request, ['verify' => false])->wait();
             $responseJson = $res->getBody()->getContents();
             $responseArray = json_decode($responseJson, true);
-
             $order_id = session()->get($this->order_session_key, null);
             session()->forget($this->order_session_key);
 
@@ -92,7 +98,8 @@ class Channel extends BasePaymentChannel implements IChannel
             return $order;
 
         } catch (\Exception $exception) {
-
+            info ('Error: ' . $exception->getMessage());
+            throw $exception;
         }
     }
 
